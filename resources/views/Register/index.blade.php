@@ -24,12 +24,19 @@
             <!-- Form -->
             <form action="/register" method="POST">
                 @csrf
-              <!-- Username -->
+              <!-- Name -->
               <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
 
                 <input type="text" id="name" class="form-control @error('name')is-invalid
-                @enderror" name="name" placeholder=" Name" required autofocus value="{{ old('name') }}">
+                @enderror" name="name" placeholder="Name" required autofocus value="{{ old('name') }}">
+              </div>
+              {{-- Username --}}
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+
+                <input type="text" id="username" class="form-control @error('username')is-invalid
+                @enderror" name="username" placeholder="Username" required autofocus value="{{ old('username') }}">
               </div>
               <!-- Email -->
               <div class="mb-3">

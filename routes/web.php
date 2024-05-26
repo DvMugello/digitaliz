@@ -13,3 +13,9 @@ Route::post('/logout',[LoginController::class, 'logout']);
 
 Route::get('/register',[RegisterController::class, 'index']);
 Route::post('/register',[RegisterController::class, 'store']);
+Route::get('/dashboard', function () {
+    return view ('Dashboard.index' , [
+        "title" => "Dashboard",
+        "active" => "dashboard"
+    ]);
+})->middleware('auth');
