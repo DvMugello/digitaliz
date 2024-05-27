@@ -22,7 +22,7 @@
 
             </div>
             <!-- Form -->
-            <form action="/register" method="POST">
+            <form action="/register" method="post">
                 @csrf
               <!-- Name -->
               <div class="mb-3">

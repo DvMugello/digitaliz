@@ -34,7 +34,7 @@
                 </div>
             @endif
 
-            <form action="/Login" method="POST">
+            <form action="/Login" method="post">
                 @csrf
               <!-- Username -->
               <div class="mb-3">
