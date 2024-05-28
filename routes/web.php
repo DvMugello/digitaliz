@@ -1,7 +1,11 @@
 <?php
+
+use App\Http\Controllers\DashboardUserCreateController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+
+Route::resource('permissions',App\Http\Controllers\PermissionController::class);
 
 Route::get('/', function () {
     return view('homepage');
@@ -19,3 +23,4 @@ Route::get('/dashboard', function () {
         "active" => "dashboard"
     ]);
 })->middleware('auth');
+Route::resource('/Dashboard/user',DashboardUserCreateController::class)->middleware('auth');

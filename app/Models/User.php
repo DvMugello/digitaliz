@@ -50,6 +50,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function req_user()
+    {
+        return $this->hasMany(userRequest::class);
+    }
+
 
     public function getGetRoleAttribute()
     {

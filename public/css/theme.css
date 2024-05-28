@@ -255,7 +255,7 @@ h2,
 .h2 {
   font-size: calc(1.3125rem + 0.75vw); }
   @media (min-width: 1200px) {
-    
+
     h2,
     .h2 {
       font-size: 1.875rem; } }
@@ -265,7 +265,7 @@ h3,
 .h3 {
   font-size: calc(1.275rem + 0.3vw); }
   @media (min-width: 1200px) {
-    
+
     h3,
     .h3 {
       font-size: 1.5rem; } }
@@ -4485,7 +4485,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #624BFF;
+  color: #624BFF;   
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .nav-link {

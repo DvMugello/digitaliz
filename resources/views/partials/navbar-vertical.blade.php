@@ -7,6 +7,7 @@
          </a>
          <!-- Navbar nav -->
          <ul class="navbar-nav flex-column" id="sideNavbar">
+
              <li class="nav-item">
                  <a class="nav-link has-arrow @@if (context.page ===  'dashboard') { active }"
                      href="/">
@@ -75,29 +76,34 @@
                      </ul>
                  </div>
 
-             </li> --}}
-
-
+                </li> --}}
              <!-- Nav item -->
              <li class="nav-item">
-                 {{-- <a class="nav-link has-arrow @@if (context.page_group !== 'authentication') { collapsed }"
-                     href="#!" data-bs-toggle="collapse" data-bs-target="#navAuthentication" aria-expanded="false"
-                     aria-controls="navAuthentication">
-                     <i data-feather="lock" class="nav-icon icon-xs me-2">
-                     </i> Authentication
-                 </a> --}}
                  <div id="navAuthentication"
                      class="collapse @@if (context.page_group === 'authentication') { show }"
                      data-bs-parent="#sideNavbar">
-                     <ul class="nav flex-column">
-                         <li class="nav-item">
-                             <a class="nav-link @@if ($title === 'Login') { active }"
-                                 href="/Login"> Login</a>
-                         </li>
-                     </ul>
-                 </div>
-             </li>
+                     @auth
+                         <form action="/logout" method="post">
+                             @csrf
+                             <ul class="nav flex-column">
+                                 <li class="nav-item">
+                                     <button type="submit" class="nav-link"><i
+                                             class="bi bi-box-arrow-in-right">Logout</i></button>
 
+                                 </li>
+                             </ul>
+                         </form>
+                     @else
+                         <ul class="nav flex-column">
+                             <li class="nav-item">
+                                 <a class="nav-link @@if ($title === 'Login') { active }"
+                                     href="/Login"> Login</a>
+                             </li>
+                         </ul>
+                     </div>
+                 </li>
+                 </form>
+             @endauth
              <!-- Nav item -->
              <li class="nav-item">
                  <div class="navbar-heading">Documentation</div>
@@ -111,10 +117,6 @@
                      </i> Docs
                  </a>
              </li>
-
-
-
-
          </ul>
 
      </div>
