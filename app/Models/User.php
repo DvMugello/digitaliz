@@ -52,7 +52,7 @@ class User extends Authenticatable
     }
     public function req_user()
     {
-        return $this->hasMany(userRequest::class);
+        return $this->hasMany(Post::class);
     }
 
 

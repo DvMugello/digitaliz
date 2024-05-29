@@ -154,7 +154,7 @@
                                 @endif
                                 <div class="table-responsive small col-lg-8">
                                     <table class="table table-striped table-sm">
-                                        <form method="post" action="/Dashboard/user" enctype="multipart/form-data">
+                                        <form method="post" action="/dashboard/create" enctype="multipart/form-data">
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="kegiatan" class="form-label">Nama Kegiatan</label>

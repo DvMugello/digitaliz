@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use App\Models\userRequest;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class DashboardUserCreateController extends Controller
@@ -13,7 +13,7 @@ class DashboardUserCreateController extends Controller
      */
     public function index()
     {
-return view ('Dashboard.user');
+    return view ('Dashboard.user.index');
     }
 
     /**
@@ -32,15 +32,17 @@ return view ('Dashboard.user');
      */
     public function store(Request $request)
     {
+        // return request()->all();
         $validateData = $request->validate([
             'kegiatan' => 'required|max:255',
-            'tanggal' => 'required|unique:posts',
+            'tanggal' => 'required',
             'jam' =>'required',
             'dokumentasi'=>'file|required',
         ]);
 
-        userRequest::create($validateData);
-        return redirect ('/Dashboard')->with('success','New request has been added');
+        Post::create($validateData);
+
+        return redirect('/Dashboard/user')->with('success','request has been added');
     }
 
     /**
@@ -48,7 +50,7 @@ return view ('Dashboard.user');
      */
     public function show(string $id)
     {
-        //
+        return view ('Dashboard.user.show');
     }
 
     /**
@@ -56,7 +58,7 @@ return view ('Dashboard.user');
      */
     public function edit(string $id)
     {
-        //
+        return view ('Dashboard.user.edit');
     }
 
     /**

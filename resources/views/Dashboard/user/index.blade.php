@@ -149,25 +149,16 @@
                       </tr>
                     </thead>
                     <tbody>
+                        @foreach ($posts as $post)
+
                       <tr>
                         <td class="align-middle border-bottom-0"></td>
                         <td class="align-middle border-bottom-0"></td>
                         <td class="align-middle border-bottom-0"></td>
                         <td class="align-middle border-bottom-0"></td>
-
-                        {{-- <td class="align-middle text-dark border-bottom-0"><div
-                            class="float-start me-3">75%</div>
-                          <div class="mt-2">
-                            <div class="progress" style="height: 5px;">
-                              <div class="progress-bar" role="progressbar"
-                                style="width:75%" aria-valuenow="75"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-
-                        </td> --}}
                       </tr>
 
+                      @endforeach
                     </tbody>
                   </table>
                 </div>
