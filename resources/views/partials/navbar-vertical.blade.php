@@ -15,6 +15,14 @@
                  </a>
 
              </li>
+             <li class="nav-item">
+                @role('admin')
+                 <a class="nav-link has-arrow @@if (context.page ===  'dashboard') { active }"
+                     href="/Dashboard/admin">
+                     <i data-feather="home" class="nav-icon icon-xs me-2"></i> Dashboard Admin
+                 </a>
+                 @endrole
+             </li>
 
 
              <!-- Nav item -->
@@ -85,10 +93,9 @@
                      @auth
                          <form action="/logout" method="post">
                              @csrf
-                             <ul class="nav flex-column">
-                                 <li class="nav-item">
-                                     <button type="submit" class="nav-link"><i
-                                             class="bi bi-box-arrow-in-right">Logout</i></button>
+                             <ul class="nav flex-column border border-0">
+                                 <li class="nav-item border border-0">
+                                     <button type="submit" class="nav-link border border-0 bg-dark text-white">Logout</button>
 
                                  </li>
                              </ul>

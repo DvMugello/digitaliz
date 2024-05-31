@@ -1,254 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    @include('partials.head')
-    <title>{{ $title }} | Dash Ui - Bootstrap 5 Admin Dashboard Template</title>
-</head>
+  <head>
+    @include("partials.head")
+    <title>{{ $title }} | Dash Ui</title>
+  </head>
 
-<body>
+  <body>
     <div id="db-wrapper">
-        <!-- navbar vertical -->
-        @include('partials.navbar-vertical')
-        <!-- Page content -->
-        <div id="page-content">
-            @include('partials.header')
-            <!-- Container fluid -->
-            <div class="bg-primary pt-10 pb-21"></div>
-            <div class="container-fluid mt-n22 px-6">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-12">
-                        <!-- Page header -->
-                        <div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="mb-2 mb-lg-0">
-                                    <h3 class="mb-0 fw-bold text-white">Projects</h3>
-                                </div>
-                                {{-- <div>
-                                    <a href="" class="btn btn-white">Create New Project</a>
-                                </div> --}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-                        <!-- card -->
-                        <div class="card rounded-3">
-                            <!-- card body -->
-                            <div class="card-body">
-                                <!-- heading -->
-                                <div class="d-flex justify-content-between align-items-center
-                    mb-3">
-                                    <div>
-                                        <h4 class="mb-0">Projects</h4>
-                                    </div>
-                                    <div
-                                        class="icon-shape icon-md bg-light-primary text-primary
-                      rounded-1">
-                                        <i class="bi bi-briefcase fs-4"></i>
-                                    </div>
-                                </div>
-                                <!-- project number -->
-                                <div>
-                                    <h1 class="fw-bold">18</h1>
-                                    <p class="mb-0"><span class="text-dark me-2">2</span>Completed</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-                        <!-- card -->
-                        <div class="card rounded-3">
-                            <!-- card body -->
-                            <div class="card-body">
-                                <!-- heading -->
-                                <div class="d-flex justify-content-between align-items-center
-                    mb-3">
-                                    <div>
-                                        <h4 class="mb-0">Active Task</h4>
-                                    </div>
-                                    <div
-                                        class="icon-shape icon-md bg-light-primary text-primary
-                      rounded-1">
-                                        <i class="bi bi-list-task fs-4"></i>
-                                    </div>
-                                </div>
-                                <!-- project number -->
-                                <div>
-                                    <h1 class="fw-bold">132</h1>
-                                    <p class="mb-0"><span class="text-dark me-2">28</span>Completed</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-                        <!-- card -->
-                        <div class="card rounded-3">
-                            <!-- card body -->
-                            <div class="card-body">
-                                <!-- heading -->
-                                <div class="d-flex justify-content-between align-items-center
-                    mb-3">
-                                    <div>
-                                        <h4 class="mb-0">Teams</h4>
-                                    </div>
-                                    <div
-                                        class="icon-shape icon-md bg-light-primary text-primary
-                      rounded-1">
-                                        <i class="bi bi-people fs-4"></i>
-                                    </div>
-                                </div>
-                                <!-- project number -->
-                                <div>
-                                    <h1 class="fw-bold">12</h1>
-                                    <p class="mb-0"><span class="text-dark me-2">1</span>Completed</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-                        <!-- card -->
-                        <div class="card rounded-3">
-                            <!-- card body -->
-                            <div class="card-body">
-                                <!-- heading -->
-                                <div class="d-flex justify-content-between align-items-center
-                    mb-3">
-                                    <div>
-                                        <h4 class="mb-0">Productivity</h4>
-                                    </div>
-                                    <div
-                                        class="icon-shape icon-md bg-light-primary text-primary
-                      rounded-1">
-                                        <i class="bi bi-bullseye fs-4"></i>
-                                    </div>
-                                </div>
-                                <!-- project number -->
-                                <div>
-                                    <h1 class="fw-bold">76%</h1>
-                                    <p class="mb-0"><span class="text-success me-2">5%</span>Completed</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- navbar vertical -->
+      @include('partials.navbar-vertical')
+       <!-- Page content -->
+      <div id="page-content">
+        @include("partials.header")
+        <!-- Container fluid -->
+        <div class="bg-primary pt-10 pb-21"></div>
+        <div class="container-fluid mt-n22 px-6">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="mb-2 mb-lg-0">
+                    <h3 class="mb-0 fw-bold text-white">Projects</h3>
+                  </div>
+                  <div>
+                    <a href="/Dashboard/user/create" class="btn btn-white">Create New Project</a>
+                  </div>
                 </div>
-                <!-- row  -->
-                <div class="row mt-6">
-                    <div class="col-md-12 col-12">
-                        <!-- card  -->
-                        <div class="card">
-                            <!-- card header  -->
-                            <div class="card-header bg-white border-bottom-0 py-4">
-                                <h4 class="mb-0">Active Projects</h4>
-                            </div>
-                            <!-- table  -->
-                            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                                <div
-                                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                                    <h1 class="fs-4">Create New Post</h1>
-                                </div>
-                                @if (session()->has('success'))
-                                    <div class="alert alert-success col-lg-6" role="alert">
-                                        {{ session('success') }}
-                                    </div>
-                                @endif
-                                <div class="table-responsive small col-lg-8">
-                                    <table class="table table-striped table-sm">
-                                        <form method="post" action="/Dashboard/user" enctype="multipart/form-data">
-                                            @csrf
-                                            <div class="mb-3">
-                                                <label for="unit" class="form-label">Nama Unit</label>
-                                                <input type="text"
-                                                    class="form-control @error('unit')
-                                is-invalid
-                                @enderror"
-                                                    id="unit" name="unit" required autofocus
-                                                    value="{{ old('unit') }}">
-                                                @error('unit')
-                                                    <div class="invalid-feedback">
-                                                        {{ $message }}
-                                                    </div>
-                                                @enderror
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="telpon" class="form-label">No Telepon</label>
-                                                <input type="text"
-                                                    class="form-control @error('telpon')
-                                is-invalid
-                                @enderror"
-                                                    id="telpon" name="telpon" required autofocus
-                                                    value="{{ old('telpon') }}">
-                                                @error('telpon')
-                                                    <div class="invalid-feedback">
-                                                        {{ $message }}
-                                                    </div>
-                                                @enderror
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="kegiatan" class="form-label">Nama Kegiatan</label>
-                                                <input type="text"
-                                                    class="form-control @error('kegiatan')
-                                is-invalid
-                                @enderror"
-                                                    id="kegiatan" name="kegiatan" required autofocus
-                                                    value="{{ old('kegiatan') }}">
-                                                @error('kegiatan')
-                                                    <div class="invalid-feedback">
-                                                        {{ $message }}
-                                                    </div>
-                                                @enderror
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="tanggal" class="form-label">Tanggal</label>
-                                                <input type="date"
-                                                    class="form-control @error('tanggal')
-                                is-invalid
-                                @enderror"
-                                                    id="tanggal" name="tanggal" required value="{{ old('tanggal') }}">
-                                                @error('tanggal')
-                                                    <div class="invalid-feedback">
-                                                        {{ $message }}
-                                                    </div>
-                                                @enderror
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="jam" class="form-label">Jam</label>
-                                                <input type="text"
-                                                    class="form-control @error('jam')
-                                is-invalid
-                                @enderror"
-                                                    id="jam" name="jam" required value="{{ old('jam') }}">
-                                                @error('jam')
-                                                    <div class="invalid-feedback">
-                                                        {{ $message }}
-                                                    </div>
-                                                @enderror
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="category" class="form-label">Category</label>
-                                                <select name="category_id" class="form-select">
-                                                    @foreach ($categories as $category)
-                                                        @if (old('category_id') == $category->id)
-                                                            <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
-                                                        @else
-                                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                                        @endif
-                                                    @endforeach
-                                                </select>
-                                            </div>
-
-
-                                            <button type="submit" class="btn btn-primary">Create Post</button>
-                                        </form>
-                                    </table>
-                                </div>
-                            </main>
-                        </div>
-
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <div class="card rounded-3">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Projects</h4>
                     </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-1">
+                      <i class="bi bi-briefcase fs-4"></i>
+                    </div>
+                  </div>
+                  <!-- project number -->
+                  <div>
+                    <h1 class="fw-bold">18</h1>
+                    <p class="mb-0"><span class="text-dark me-2">2</span>Completed</p>
+                  </div>
                 </div>
-                <!-- row  -->
-                {{-- <div class="row my-6">
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <div class="card rounded-3">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Active Task</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-1">
+                      <i class="bi bi-list-task fs-4"></i>
+                    </div>
+                  </div>
+                  <!-- project number -->
+                  <div>
+                    <h1 class="fw-bold">132</h1>
+                    <p class="mb-0"><span class="text-dark me-2">28</span>Completed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <div class="card rounded-3">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Teams</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-1">
+                      <i class="bi bi-people fs-4"></i>
+                    </div>
+                  </div>
+                  <!-- project number -->
+                  <div>
+                    <h1 class="fw-bold">12</h1>
+                    <p class="mb-0"><span class="text-dark me-2">1</span>Completed</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <div class="card rounded-3">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Productivity</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-1">
+                      <i class="bi bi-bullseye fs-4"></i>
+                    </div>
+                  </div>
+                  <!-- project number -->
+                  <div>
+                    <h1 class="fw-bold">76%</h1>
+                    <p class="mb-0"><span class="text-success me-2">5%</span>Completed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row  -->
+          <div class="row mt-6">
+            <div class="col-md-12 col-12">
+              <!-- card  -->
+              <div class="card">
+                <!-- card header  -->
+                <div class="card-header bg-white border-bottom-0 py-4">
+                  <h4 class="mb-0">Active Projects</h4>
+                </div>
+                <!-- table  -->
+                <div class="table-responsive">
+                  <table class="table text-nowrap mb-0">
+                    <thead class="table-light">
+                      <tr>
+                        <th>#</th>
+                        <th>Kegiatan</th>
+                        <th>Tanggal</th>
+                        <th>Waktu</th>
+                        <th>Documentasi</th>
+                        <th>action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($posts as $post)
+
+                      <tr>
+                        <td class="align-middle border-bottom-0">{{ $loop->iteration }}</td>
+                        <td class="align-middle border-bottom-0">{{ $post->kegiatan}}</td>
+                        <td class="align-middle border-bottom-0">{{ $post->tanggal }}</td>
+                        <td class="align-middle border-bottom-0">{{ $post->jam }}</td>
+                        <td class="align-middle border-bottom-0">{{ $post->category->name}}</td>
+
+                        <td><a href="/Dashboard/user" class="badge bg-info"><i
+                            class="bi bi-eye"></i></a></td>
+                        <td><a href="/Dashboard/user/update" class="badge bg-warning"><i class="bi bi-plus-circle"></i></a></td>
+
+                        <form action="/Dashboard/user" method="post" class="d-inline">
+                        @method('delete')
+                        @csrf
+                        <td>
+                            <button class="badge bg-danger border-0" onclick="return confirm('Hapus Data Ini?')"><i class="bi bi-x-circle"></i></button>
+                        </td>
+                    </form>
+                      </tr>
+
+                      @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- card footer  -->
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+              </div>
+
+            </div>
+          </div>
+          <!-- row  -->
+          {{-- <div class="row my-6">
             <div class="col-xl-4 col-lg-12 col-md-12 col-12 mb-6 mb-xl-0">
               <!-- card  -->
               <div class="card h-100">
@@ -533,15 +481,14 @@
               </div>
             </div>
           </div> --}}
-            </div>
         </div>
+      </div>
     </div>
 
-
     <!-- Scripts -->
-    @include('partials.scripts')
+    @include("partials.scripts")
 
 
-</body>
+  </body>
 
 </html>

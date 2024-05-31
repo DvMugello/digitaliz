@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    @include("partials.head")
+    @include('partials.head')
     <title>Dashboard | Dash Ui</title>
   </head>
 
@@ -12,7 +12,7 @@
       @include('partials.navbar-vertical')
        <!-- Page content -->
       <div id="page-content">
-        @include("partials.header")
+        @include('partials.header')
         <!-- Container fluid -->
         <div class="bg-primary pt-10 pb-21"></div>
         <div class="container-fluid mt-n22 px-6">
@@ -142,23 +142,30 @@
                   <table class="table text-nowrap mb-0">
                     <thead class="table-light">
                       <tr>
+                        <th>#</th>
+                        <th>Nama unit</th>
+                        <th>No Telepon</th>
                         <th>Kegiatan</th>
                         <th>Tanggal</th>
                         <th>Waktu</th>
                         <th>Documentasi</th>
+                        <th>action</th>
                       </tr>
                     </thead>
                     <tbody>
-                        {{-- @foreach ($posts as $post) --}}
+                        @foreach ($posts as $post)
 
                       <tr>
-                        <td class="align-middle border-bottom-0"></td>
-                        <td class="align-middle border-bottom-0"></td>
-                        <td class="align-middle border-bottom-0"></td>
-                        <td class="align-middle border-bottom-0"></td>
+                        <td class="align-middle border-bottom-0">{{ $loop->iteration }}</td>
+                        <td class="align-middle border-bottom-0">{{ $post->unit}}</td>
+                        <td class="align-middle border-bottom-0">{{ $post->telpon}}</td>
+                        <td class="align-middle border-bottom-0">{{ $post->kegiatan}}</td>
+                        <td class="align-middle border-bottom-0">{{ $post->tanggal }}</td>
+                        <td class="align-middle border-bottom-0">{{ $post->jam }}</td>
+                        <td class="align-middle border-bottom-0">{{ $post->category->name}}</td>
                       </tr>
 
-                      {{-- @endforeach --}}
+                      @endforeach
                     </tbody>
                   </table>
                 </div>

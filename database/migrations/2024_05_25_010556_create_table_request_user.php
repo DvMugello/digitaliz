@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->foreignId('category_id');
             $table->foreignId('user_id');
+            $table->string('unit');
+            $table->string('telpon');
             $table->string('kegiatan');
             $table->date('tanggal');
-            $table->time('jam');
-            $table->string('dokumentasi');
+            $table->string('jam');
             $table->timestamps();
         });
     }

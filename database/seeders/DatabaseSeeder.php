@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
+use Database\Seeders\RoleSeeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,8 +22,17 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         $this->call([
-            RolesSeeder::class,
+            RoleSeeder::class,
             AdminSeeder::class
+        ]);
+        Category::create([
+            'name'=>'Photo'
+        ]);
+        Category::create([
+            'name'=>'Video'
+        ]);
+        Category::create([
+            'name'=>'Streaming'
         ]);
     }
 }

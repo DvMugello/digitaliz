@@ -1,187 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    @include("partials.head")
-    <title>Dashboard | Dash Ui</title>
-  </head>
+<head>
+    @include('partials.head')
+    <title>{{ $title }} | Dash Ui</title>
+</head>
 
-  <body>
+<body>
     <div id="db-wrapper">
-      <!-- navbar vertical -->
-      @include('partials.navbar-vertical')
-       <!-- Page content -->
-      <div id="page-content">
-        @include("partials.header")
-        <!-- Container fluid -->
-        <div class="bg-primary pt-10 pb-21"></div>
-        <div class="container-fluid mt-n22 px-6">
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-12">
-              <!-- Page header -->
-              <div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="mb-2 mb-lg-0">
-                    <h3 class="mb-0 fw-bold text-white">Projects</h3>
-                  </div>
-                  <div>
-                    <a href="/Dashboard/user/create" class="btn btn-white">Create New Project</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-              <!-- card -->
-              <div class="card rounded-3">
-                <!-- card body -->
-                <div class="card-body">
-                  <!-- heading -->
-                  <div class="d-flex justify-content-between align-items-center
+        <!-- navbar vertical -->
+        @include('partials.navbar-vertical')
+        <!-- Page content -->
+        <div id="page-content">
+            @include('partials.header')
+            <!-- Container fluid -->
+            <div class="bg-primary pt-10 pb-21"></div>
+            <div class="container-fluid mt-n22 px-6">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <!-- Page header -->
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mb-2 mb-lg-0">
+                                    <h3 class="mb-0 fw-bold text-white">Projects</h3>
+                                </div>
+                                <div>
+                                    <a href="/Dashboard/user/create" class="btn btn-white">Create New Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+                        <!-- card -->
+                        <div class="card rounded-3">
+                            <!-- card body -->
+                            <div class="card-body">
+                                <!-- heading -->
+                                <div class="d-flex justify-content-between align-items-center
                     mb-3">
-                    <div>
-                      <h4 class="mb-0">Projects</h4>
-                    </div>
-                    <div class="icon-shape icon-md bg-light-primary text-primary
+                                    <div>
+                                        <h4 class="mb-0">Projects</h4>
+                                    </div>
+                                    <div
+                                        class="icon-shape icon-md bg-light-primary text-primary
                       rounded-1">
-                      <i class="bi bi-briefcase fs-4"></i>
+                                        <i class="bi bi-briefcase fs-4"></i>
+                                    </div>
+                                </div>
+                                <!-- project number -->
+                                <div>
+                                    <h1 class="fw-bold">18</h1>
+                                    <p class="mb-0"><span class="text-dark me-2">2</span>Completed</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <!-- project number -->
-                  <div>
-                    <h1 class="fw-bold">18</h1>
-                    <p class="mb-0"><span class="text-dark me-2">2</span>Completed</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-              <!-- card -->
-              <div class="card rounded-3">
-                <!-- card body -->
-                <div class="card-body">
-                  <!-- heading -->
-                  <div class="d-flex justify-content-between align-items-center
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+                        <!-- card -->
+                        <div class="card rounded-3">
+                            <!-- card body -->
+                            <div class="card-body">
+                                <!-- heading -->
+                                <div class="d-flex justify-content-between align-items-center
                     mb-3">
-                    <div>
-                      <h4 class="mb-0">Active Task</h4>
-                    </div>
-                    <div class="icon-shape icon-md bg-light-primary text-primary
+                                    <div>
+                                        <h4 class="mb-0">Active Task</h4>
+                                    </div>
+                                    <div
+                                        class="icon-shape icon-md bg-light-primary text-primary
                       rounded-1">
-                      <i class="bi bi-list-task fs-4"></i>
+                                        <i class="bi bi-list-task fs-4"></i>
+                                    </div>
+                                </div>
+                                <!-- project number -->
+                                <div>
+                                    <h1 class="fw-bold">132</h1>
+                                    <p class="mb-0"><span class="text-dark me-2">28</span>Completed</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <!-- project number -->
-                  <div>
-                    <h1 class="fw-bold">132</h1>
-                    <p class="mb-0"><span class="text-dark me-2">28</span>Completed</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-              <!-- card -->
-              <div class="card rounded-3">
-                <!-- card body -->
-                <div class="card-body">
-                  <!-- heading -->
-                  <div class="d-flex justify-content-between align-items-center
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+                        <!-- card -->
+                        <div class="card rounded-3">
+                            <!-- card body -->
+                            <div class="card-body">
+                                <!-- heading -->
+                                <div class="d-flex justify-content-between align-items-center
                     mb-3">
-                    <div>
-                      <h4 class="mb-0">Teams</h4>
-                    </div>
-                    <div class="icon-shape icon-md bg-light-primary text-primary
+                                    <div>
+                                        <h4 class="mb-0">Teams</h4>
+                                    </div>
+                                    <div
+                                        class="icon-shape icon-md bg-light-primary text-primary
                       rounded-1">
-                      <i class="bi bi-people fs-4"></i>
-                    </div>
-                  </div>
-                  <!-- project number -->
-                  <div>
-                    <h1 class="fw-bold">12</h1>
-                    <p class="mb-0"><span class="text-dark me-2">1</span>Completed</p>
-                  </div>
-                </div>
-              </div>
+                                        <i class="bi bi-people fs-4"></i>
+                                    </div>
+                                </div>
+                                <!-- project number -->
+                                <div>
+                                    <h1 class="fw-bold">12</h1>
+                                    <p class="mb-0"><span class="text-dark me-2">1</span>Completed</p>
+                                </div>
+                            </div>
+                        </div>
 
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-              <!-- card -->
-              <div class="card rounded-3">
-                <!-- card body -->
-                <div class="card-body">
-                  <!-- heading -->
-                  <div class="d-flex justify-content-between align-items-center
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+                        <!-- card -->
+                        <div class="card rounded-3">
+                            <!-- card body -->
+                            <div class="card-body">
+                                <!-- heading -->
+                                <div class="d-flex justify-content-between align-items-center
                     mb-3">
-                    <div>
-                      <h4 class="mb-0">Productivity</h4>
-                    </div>
-                    <div class="icon-shape icon-md bg-light-primary text-primary
+                                    <div>
+                                        <h4 class="mb-0">Productivity</h4>
+                                    </div>
+                                    <div
+                                        class="icon-shape icon-md bg-light-primary text-primary
                       rounded-1">
-                      <i class="bi bi-bullseye fs-4"></i>
+                                        <i class="bi bi-bullseye fs-4"></i>
+                                    </div>
+                                </div>
+                                <!-- project number -->
+                                <div>
+                                    <h1 class="fw-bold">76%</h1>
+                                    <p class="mb-0"><span class="text-success me-2">5%</span>Completed</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <!-- project number -->
-                  <div>
-                    <h1 class="fw-bold">76%</h1>
-                    <p class="mb-0"><span class="text-success me-2">5%</span>Completed</p>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- row  -->
-          <div class="row mt-6">
-            <div class="col-md-12 col-12">
-              <!-- card  -->
-              <div class="card">
-                <!-- card header  -->
-                <div class="card-header bg-white border-bottom-0 py-4">
-                  <h4 class="mb-0">Active Projects</h4>
+                <!-- row  -->
+                <div class="row mt-6">
+                    <div class="col-md-12 col-12">
+                        <!-- card  -->
+                        <div class="card">
+                            <!-- card header  -->
+                            <div class="card-header bg-white border-bottom-0 py-4">
+                                <h4 class="mb-0">Active Projects</h4>
+                            </div>
+                            <!-- table  -->
+                            <div class="table-responsive">
+                                <table class="table text-nowrap mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Kegiatan</th>
+                                            <th>Tanggal</th>
+                                            <th>Waktu</th>
+                                            <th>Documentasi</th>
+                                            <th>action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($posts as $post)
+                                            <tr>
+                                                <td class="align-middle border-bottom-0">{{ $loop->iteration }}</td>
+                                                <td class="align-middle border-bottom-0">{{ $post->kegiatan }}</td>
+                                                <td class="align-middle border-bottom-0">{{ $post->tanggal }}</td>
+                                                <td class="align-middle border-bottom-0">{{ $post->jam }}</td>
+                                                <td class="align-middle border-bottom-0">{{ $post->category->name }}
+                                                </td>
+
+                                                <td><a href="/Dashboard/user/show" class="badge bg-info"><i
+                                                            class="bi bi-eye"></i></a></td>
+                                                <td><a href="/Dashboard/user/update" class="badge bg-warning"><i
+                                                            class="bi bi-plus-circle"></i></a></td>
+
+                                                <form action="/Dashboard/user" method="post" class="d-inline">
+                                                    @method('delete')
+                                                    @csrf
+                                                    <td>
+                                                        <button class="badge bg-danger border-0"
+                                                            onclick="return confirm('Hapus Data Ini?')"><i
+                                                                class="bi bi-x-circle"></i></button>
+                                                    </td>
+                                                </form>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- card footer  -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
                 </div>
-                <!-- table  -->
-                <div class="table-responsive">
-                  <table class="table text-nowrap mb-0">
-                    <thead class="table-light">
-                      <tr>
-                        <th>Kegiatan</th>
-                        <th>Tanggal</th>
-                        <th>Waktu</th>
-                        <th>Documentasi</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($posts as $post)
-
-                      <tr>
-                        <td class="align-middle border-bottom-0"></td>
-                        <td class="align-middle border-bottom-0"></td>
-                        <td class="align-middle border-bottom-0"></td>
-                        <td class="align-middle border-bottom-0"></td>
-                      </tr>
-
-                      @endforeach
-                    </tbody>
-                  </table>
-                </div>
-                <!-- card footer  -->
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item disabled">
-                        <a class="page-link">Previous</a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                      </li>
-                    </ul>
-                  </nav>
-              </div>
-
-            </div>
-          </div>
-          <!-- row  -->
-          {{-- <div class="row my-6">
+                <!-- row  -->
+                {{-- <div class="row my-6">
             <div class="col-xl-4 col-lg-12 col-md-12 col-12 mb-6 mb-xl-0">
               <!-- card  -->
               <div class="card h-100">
@@ -466,14 +487,14 @@
               </div>
             </div>
           </div> --}}
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Scripts -->
-    @include("partials.scripts")
+    @include('partials.scripts')
 
 
-  </body>
+</body>
 
 </html>

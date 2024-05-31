@@ -19,9 +19,18 @@ class LoginController extends Controller
             'email'=> 'required|email',
             'password'=>'required'
         ]);
+        // $request->authenticate();
+        // $request->session()->regenerate();
+        // $user= Auth::user()
+
+        // if($user->hasRole('admin'));
+
 
         if(Auth::attempt($credentials)){
-            $request->session()->regenerate();
+            // $request->authenticate();
+            // $request->session()->regenerate();
+            // $user= Auth::user();
+            // if($user->hasRole('admin'));
             return redirect()->intended('/Dashboard/user');
         }
 

@@ -3,7 +3,7 @@
 
 <head>
     @include('partials.head')
-    <title>Homepage | Dash Ui - Bootstrap 5 Admin Dashboard Template</title>
+    <title>{{ $title }} | Dash Ui - Bootstrap 5 Admin Dashboard Template</title>
 </head>
 
 <body>
@@ -145,7 +145,7 @@
                             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                                 <div
                                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                                    <h1 class="fs-4">Create New Post</h1>
+                                    <h1 class="fs-4">Edit Post</h1>
                                 </div>
                                 @if (session()->has('success'))
                                     <div class="alert alert-success col-lg-6" role="alert">
@@ -154,8 +154,37 @@
                                 @endif
                                 <div class="table-responsive small col-lg-8">
                                     <table class="table table-striped table-sm">
-                                        <form method="post" action="/dashboard/create" enctype="multipart/form-data">
+                                        <form method="post" action="/Dashboard/user">
+                                            @method('put')
                                             @csrf
+                                            <div class="mb-3">
+                                                <label for="unit" class="form-label">Nama Unit</label>
+                                                <input type="text"
+                                                    class="form-control @error('unit')
+                                is-invalid
+                                @enderror"
+                                                    id="unit" name="unit" required autofocus
+                                                    value="{{ old('unit') }}">
+                                                @error('unit')
+                                                    <div class="invalid-feedback">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="telpon" class="form-label">No Telepon</label>
+                                                <input type="text"
+                                                    class="form-control @error('telpon')
+                                is-invalid
+                                @enderror"
+                                                    id="telpon" name="telpon" required autofocus
+                                                    value="{{ old('telpon') }}">
+                                                @error('telpon')
+                                                    <div class="invalid-feedback">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+                                            </div>
                                             <div class="mb-3">
                                                 <label for="kegiatan" class="form-label">Nama Kegiatan</label>
                                                 <input type="text"
@@ -171,7 +200,7 @@
                                                 @enderror
                                             </div>
                                             <div class="mb-3">
-                                                <label for="tanggal" class="form-label">tanggal</label>
+                                                <label for="tanggal" class="form-label">Tanggal</label>
                                                 <input type="date"
                                                     class="form-control @error('tanggal')
                                 is-invalid
@@ -184,33 +213,36 @@
                                                 @enderror
                                             </div>
                                             <div class="mb-3">
-                                                <label for="jam" class="form-label">jam</label>
-                                                <input type="time"
+                                                <label for="jam" class="form-label">Jam</label>
+                                                <input type="text"
                                                     class="form-control @error('jam')
                                 is-invalid
                                 @enderror"
-                                                    id="jam" name="jam" required value="{{ old('jam') }}">
+                                                    id="jam" name="jam" required
+                                                    value="{{ old('jam') }}">
                                                 @error('jam')
                                                     <div class="invalid-feedback">
                                                         {{ $message }}
                                                     </div>
                                                 @enderror
                                             </div>
-
                                             <div class="mb-3">
-                                                <label for="dokumentasi" class="form-label">Post Dokumentasi</label>
-                                                <input type="file" id="dokumentasi" name="dokumentasi"
-                                                    class="form-control  @error('dokumentasi')
-                                is-invalid
-                                @enderror">
-                                                @error('dokumentasi')
-                                                    <div class="invalid-feedback">
-                                                        {{ $message }}
-                                                    </div>
-                                                @enderror
+                                                <label for="category" class="form-label">Category</label>
+                                                <select name="category_id" class="form-select">
+                                                    @foreach ($categories as $category)
+                                                        @if (old('category_id') == $category->id)
+                                                            <option value="{{ $category->id }}" selected>
+                                                                {{ $category->name }}</option>
+                                                        @else
+                                                            <option value="{{ $category->id }}">{{ $category->name }}
+                                                            </option>
+                                                        @endif
+                                                    @endforeach
+                                                </select>
                                             </div>
 
-                                            <button type="submit" class="btn btn-primary">Create Post</button>
+
+                                            <button type="submit" class="btn btn-primary">Edit Post</button>
                                         </form>
                                     </table>
                                 </div>
